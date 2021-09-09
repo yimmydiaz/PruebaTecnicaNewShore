@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
   @Output() filter = new EventEmitter<string>(); // Take the value that is passed from child to parent
   
   constructor(private router: Router) {    }
+  
   ngOnInit(): void {
   
   }
