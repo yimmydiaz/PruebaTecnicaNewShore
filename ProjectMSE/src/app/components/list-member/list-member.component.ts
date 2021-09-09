@@ -61,19 +61,6 @@ export class ListMemberComponent implements OnInit {
       this.sortDescendent();
     }
   }
-
-  /**
-   *  The metods are called and the list ordered in an asc and des by GENDER is obtained
-   */
-  public getListOrderMemberGender(){
-    this.orderSortGender = !this.orderSortGender;
-    if(this.orderSortGender){
-      this.sortAscendentGender();
-    }else{
-      this.sortDescendentGender();
-    }
-  }
-
   /**
    * Method that sorts the table of members by name a ASC
    * @returns The ordered list of members asc
@@ -111,8 +98,19 @@ export class ListMemberComponent implements OnInit {
       }
       return 0;
      
-    });  }
-
+    }); 
+ }
+  /**
+   *  The metods are called and the list ordered in an asc and des by GENDER is obtained
+   */
+  public getListOrderMemberGender(){
+    this.orderSortGender = !this.orderSortGender;
+    if(this.orderSortGender){
+      this.sortAscendentGender();
+    }else{
+      this.sortDescendentGender();
+    }
+  }
    /**
    * Method that sorts the table of members by gender a ASC
    * @returns The ordered list of members Asc
